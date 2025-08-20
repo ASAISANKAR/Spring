@@ -7,8 +7,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class JoblistingApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(JoblistingApplication.class, args);
+		ConfigurableApplicationContext context = SpringApplication.run(JoblistingApplication.class, args);
 		System.out.println("Server Running....");
+		Alien t1 = context.getBean(Alien.class);
+		t1.test();
 	}
 
 }
