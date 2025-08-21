@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 
 @RestController
 public class HelloController {
