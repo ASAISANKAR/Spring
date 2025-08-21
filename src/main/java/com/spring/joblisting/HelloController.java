@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
 @RestController
@@ -37,9 +36,7 @@ public class HelloController {
         return "User created: "+alien.getId();
     }
 
-    public interface StudentRepository extends MongoRepository<Student, String> {
-
-    }
+    
     @Autowired
     private StudentRepository studentRepository;
 
