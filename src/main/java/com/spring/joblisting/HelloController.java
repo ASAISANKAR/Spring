@@ -21,6 +21,7 @@ public class HelloController {
     public String home(HttpServletRequest req)
     {
         String name = req.getParameter("name");
+        System.out.println(name);
         return "Hi "+name;
     }
 }
