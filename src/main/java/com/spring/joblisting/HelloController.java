@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import org.springframework.data.mongodb.repository.MongoRepository;
 
 @RestController
 public class HelloController {
@@ -35,7 +36,6 @@ public class HelloController {
         return "User created: "+alien.getId();
     }
 
-    import org.springframework.data.mongodb.repository.MongoRepository;
     public interface StudentRepository extends MongoRepository<Student, String> {
 
     }
