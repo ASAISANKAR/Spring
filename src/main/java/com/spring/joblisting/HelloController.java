@@ -35,4 +35,18 @@ public class HelloController {
         return "User created: "+alien.getId();
     }
 
+    import org.springframework.data.mongodb.repository.MongoRepository;
+    public interface StudentRepository extends MongoRepository<Student, String> {
+
+    }
+    @Autowired
+    private StudentRepository studentRepository;
+
+    @PostMapping("/api/usersave")
+    public String usersave(@RequestBody Student stu)
+    {
+            Student savedStudent = studentRepository.save(stu);
+            return "Student saved with id: " + savedStudent.getId() +"/Student saved with name: "+savedStudent.getName();
+    }
+
 }
