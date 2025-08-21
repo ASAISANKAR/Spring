@@ -20,7 +20,6 @@ public class HelloController {
     public String home(@RequestParam(name = "name", required = false, defaultValue = "Guest") String name)
     // public String home(HttpServletRequest req)
     {
-        String name = req.getParameter("name");
         System.out.println(name);
         return "Hi "+name;
     }
