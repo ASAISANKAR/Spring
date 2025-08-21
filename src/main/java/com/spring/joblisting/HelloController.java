@@ -35,16 +35,4 @@ public class HelloController {
     public String user(@RequestBody Alien alien){
         return "User created: "+alien.getId();
     }
-
-    
-    @Autowired
-    private StudentRepository studentRepository;
-
-    @PostMapping("/api/usersave")
-    public String usersave(@RequestBody Student stu)
-    {
-            Student savedStudent = studentRepository.save(stu);
-            return "Student saved with id: " + savedStudent.getId() +"/Student saved with name: "+savedStudent.getName();
-    }
-
 }
