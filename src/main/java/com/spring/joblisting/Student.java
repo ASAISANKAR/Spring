@@ -1,11 +1,13 @@
 package com.spring.joblisting;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-
-@Document(collection = "student")
+@Entity
 public class Student {
+
     @Id
     String id;
     String name;
@@ -21,3 +23,4 @@ public class Student {
 {        return name;
 }
 }
+
